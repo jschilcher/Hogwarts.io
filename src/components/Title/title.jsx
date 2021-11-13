@@ -1,8 +1,11 @@
 import React from "react";
+import "./title.css";
 
 function Title () {
     return(
-        <div></div>
+        <div className="title-nav">
+            <h1>Hogwarts Characters</h1>
+        </div>
     )
 }
 
