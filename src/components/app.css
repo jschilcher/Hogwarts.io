@@ -1,0 +1,7 @@
+body {
+    background-image: -webkit-linear-gradient(180deg, rgb(255, 2, 2), rgb(248, 252, 1), rgb(0, 2, 134), rgb(21, 158, 3));
+}
+
+.App {
+    text-align: center;
+  }
