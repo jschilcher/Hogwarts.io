@@ -17,8 +17,21 @@ const Characters = () => {
         .get(`http://hp-api.herokuapp.com/api/characters`)
         .then((response) => {
             setCharacterData(response.data.results);
-        }).catch(err => consolelog(err))
+        }).catch(err => console.log(err))
     };
+
+    if (characterData[0] === undefined){
+        console.log(characterData)
+        return(
+            <div>Loading....</div>
+        )
+    }
+    else {
+        console.log(characterData)
+        return(
+            <div></div>
+        )
+    }
 }
 
 export default Characters;
