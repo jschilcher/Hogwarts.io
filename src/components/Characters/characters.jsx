@@ -1,9 +1,8 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import axios from "axios";
 
-function Characters () {
-    return(
-        <div></div>
-    )
+const Characters = () => {
+    const [characterData, setCharacterData] = useState([]);
 }
 
 export default Characters;
