@@ -8,6 +8,10 @@ const Characters = () => {
         document.title = "Characters - Hogwarts";
       }, []);
 
+    useEffect(() => {
+        fetchAllCharacters();
+      }, []);
+
     const fetchAllCharacters = async (event) => {
         await axios 
         .get(`http://hp-api.herokuapp.com/api/characters`)
