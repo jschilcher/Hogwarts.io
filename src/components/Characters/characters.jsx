@@ -16,12 +16,13 @@ const Characters = () => {
         await axios 
         .get(`http://hp-api.herokuapp.com/api/characters`)
         .then((response) => {
-            setCharacterData(response.data.results);
+            setCharacterData(response.data);
+            console.log(response)
         }).catch(err => console.log(err))
     };
 
     if (characterData[0] === undefined){
-        console.log(characterData)
+        // console.log(characterData)
         return(
             <div>Loading....</div>
         )

@@ -8,9 +8,7 @@ function App () {
     return(
         <div className="App">
             <Title/>
-            <Routes>
-                <Route exact path="/" element component={Characters}/>
-            </Routes>
+            <Characters/>
         </div>
     )
 }
