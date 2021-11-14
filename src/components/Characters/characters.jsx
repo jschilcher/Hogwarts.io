@@ -29,7 +29,9 @@ const Characters = () => {
     else {
         console.log(characterData)
         return(
-            <div></div>
+            <div>
+                <h3>Harry Potter Characters</h3>
+            </div>
         )
     }
 }

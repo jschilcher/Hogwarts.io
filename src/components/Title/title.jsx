@@ -4,7 +4,7 @@ import "./title.css";
 function Title () {
     return(
         <div className="title-nav">
-            <h1>Hogwarts Characters</h1>
+            <h1>Hogwarts: A History</h1>
         </div>
     )
 }
