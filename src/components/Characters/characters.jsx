@@ -32,6 +32,16 @@ const Characters = () => {
         return(
             <div>
                 <h3>Harry Potter Characters</h3>
+                {characterData.map((character) =>
+                    <div className="book-card" style={{width: 200}}>
+                        <img src={`${character.image}`} className="card-img-top" alt="" />
+                            <div className="card-body">
+                                <h3 className="card-title">{`${character.name}`}</h3>
+                                <p className="card-text">{`${character.dateOfBirth}`}</p>
+                                <p className="card-text">{`${character.house}`}</p>
+                            </div>
+                    </div>
+                )}
             </div>
         )
     }
