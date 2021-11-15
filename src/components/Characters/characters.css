@@ -5,3 +5,9 @@ h2 {
     font: bold;
     font-size: 27pt;
 }
+
+.card-container {
+    margin: auto;
+    width: 10%;
+    padding: 10px;
+}
