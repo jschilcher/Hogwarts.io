@@ -1,17 +1,20 @@
-const Search = () => {
+import React from "react";
+
+const Search = ({searchQuery,setSearchQuery}) => {
     return (
-        <form action="/" method="get">
-            <label htmlFor="header-search">
-                <span className="visually-hidden">Search Characters</span>
-            </label>
+        // <form action="/" method="get">
+        //     <label htmlFor="header-search">
+        //         <span className="visually-hidden"></span>
+        //     </label>
             <input 
+            key="random1"
+            value={searchQuery}
             type="text"
-            id="header-search"
             placeholder="Search Characters"
-            name="s"
+            onChange={(e) => setSearchQuery(e.target.value)}
             />
-            <button type="submit">Search</button>
-        </form>
+        //     <button type="submit">Search</button>
+        // </form>
     )
 }
 

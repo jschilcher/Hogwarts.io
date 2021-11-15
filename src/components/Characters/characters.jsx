@@ -5,7 +5,8 @@ import Search from "../Search/search";
 
 const Characters = () => {
     const [characterData, setCharacterData] = useState([]);
-
+    const [search, setSearch] = useState("");
+   
     useEffect(() => {
         document.title = "Characters - Hogwarts";
       }, []);
@@ -24,7 +25,6 @@ const Characters = () => {
     };
 
     if (characterData[0] === undefined){
-        // console.log(characterData)
         return(
             <div>Loading....</div>
         )
@@ -34,7 +34,16 @@ const Characters = () => {
         return(
             <div>
                 <h2>Harry Potter Characters</h2>
-                <Search/>
+                <form action="/" method="get">
+                    <input 
+                        type="text"
+                        className="input"
+                        value={search}
+                        onChange={e => setSearch(e.target.value)}
+                        placeholder="Search Character" 
+                    />
+                    <button type="submit">Search</button>
+                </form>
                 <div className="card-container">
                 {characterData.map((character) =>
                     <div className="book-card" style={{width: 200}}>
@@ -45,6 +54,7 @@ const Characters = () => {
                                 <p className="card-text">House: {`${character.house}`}</p>
                                 <p className="card-text">Species: {`${character.species}`}</p>
                                 <p>Wand: {`${character.wand.wood}`}, {`${character.wand.core}`}, {`${character.wand.length}`}</p>
+                                <p>Patronus: {`${character.patronus}`}</p>
                             </div>
                     </div>
                 )}
