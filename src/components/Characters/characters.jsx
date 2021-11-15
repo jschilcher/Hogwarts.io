@@ -37,8 +37,10 @@ const Characters = () => {
                         <img src={`${character.image}`} className="card-img-top" alt="" />
                             <div className="card-body">
                                 <h3 className="card-title">{`${character.name}`}</h3>
-                                <p className="card-text">{`${character.dateOfBirth}`}</p>
-                                <p className="card-text">{`${character.house}`}</p>
+                                <p className="card-text">Birth Date: {`${character.dateOfBirth}`}</p>
+                                <p className="card-text">House: {`${character.house}`}</p>
+                                <p className="card-text">Species: {`${character.species}`}</p>
+                                <p>Wand: {`${character.wand.wood}`}, {`${character.wand.core}`}, {`${character.wand.length}`}</p>
                             </div>
                     </div>
                 )}
