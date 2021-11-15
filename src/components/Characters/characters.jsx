@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 import "./characters.css";
+import Search from "../Search/search";
 
 const Characters = () => {
     const [characterData, setCharacterData] = useState([]);
@@ -33,6 +34,7 @@ const Characters = () => {
         return(
             <div>
                 <h2>Harry Potter Characters</h2>
+                <Search/>
                 <div className="card-container">
                 {characterData.map((character) =>
                     <div className="book-card" style={{width: 200}}>
