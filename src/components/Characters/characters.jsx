@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
+import "./characters.css";
 
 const Characters = () => {
     const [characterData, setCharacterData] = useState([]);
@@ -31,7 +32,7 @@ const Characters = () => {
         console.log(characterData)
         return(
             <div>
-                <h3>Harry Potter Characters</h3>
+                <h2>Harry Potter Characters</h2>
                 {characterData.map((character) =>
                     <div className="book-card" style={{width: 200}}>
                         <img src={`${character.image}`} className="card-img-top" alt="" />
