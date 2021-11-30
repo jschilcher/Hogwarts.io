@@ -34,7 +34,7 @@ const Characters = () => {
         return(
             <div>
                 <h2>Harry Potter Characters</h2>
-                <form action="/" method="get">
+               
                     <input 
                         type="text"
                         className="input"
@@ -43,7 +43,7 @@ const Characters = () => {
                         placeholder="Search Character" 
                     />
                     <button type="submit">Search</button>
-                </form>
+               
                 <div className="card-container">
                 {characterData.map((character) =>
                     <div className="book-card" style={{width: 200}}>
